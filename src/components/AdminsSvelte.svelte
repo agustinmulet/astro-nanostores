@@ -1,16 +1,14 @@
 <script>
-  import { getValue } from 'nanostores'
+  import { getValue } from 'nanostores';
 
-  import { users } from '../store/users.js';
+  import { admins } from '../store/admins.js';
   import { counter, increaseCounter, decreaseCounter } from '../store/counter.js';
-
-  const list = getValue(users).filter(user => user.isAdmin);
 </script>
 
 <h1>Svelte</h1>
 <ul>
-  {#each list as user}
-    <li>{JSON.stringify(user, null, 2)}</li>
+  {#each getValue(admins) as admin}
+    <li>{JSON.stringify(admin, null, 2)}</li>
   {/each}
 </ul>
 <div>

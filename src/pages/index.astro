@@ -1,11 +1,14 @@
 ---
+// Component Imports
 import AdminsReact from '../components/AdminsReact.jsx';
 import AdminsSvelte from '../components/AdminsSvelte.svelte';
 import AdminsVue from '../components/AdminsVue.vue';
 import AdminsPreact from '../components/AdminsPreact.jsx';
----
+import AdminsSolid from '../components/AdminsSolid.jsx';
 
-<!doctype html>
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,10 +38,11 @@ import AdminsPreact from '../components/AdminsPreact.jsx';
                 <a href="https://github.com/nanostores/nanostores">nanostores</a></h1>
             </div>
         </header>
-        <AdminsReact:load />
-        <AdminsSvelte:load />
-        <AdminsVue:load />
-        <AdminsPreact:load />
+        <AdminsReact client:load />
+        <AdminsSvelte client:load />
+        <AdminsVue client:load />
+        <AdminsPreact client:load />
+        <AdminsSolid client:load />
     </main>
 </body>
 </html>
