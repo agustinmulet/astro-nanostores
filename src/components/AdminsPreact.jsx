@@ -1,5 +1,5 @@
 import { h, Fragment } from 'preact';
-import { useStore } from 'nanostores/preact';
+import { useStore } from '@nanostores/preact';
 
 import { admins } from '../store/admins.js';
 import { counter, increaseCounter, decreaseCounter } from '../store/counter.js';
@@ -18,7 +18,7 @@ const AdminsPreact = () => {
       </ul>
       <div>
         <h3>Counter</h3>
-        <p>{count}</p>
+        <p>{count.value}</p>
         <button onClick={decreaseCounter}>-1</button>
         <button onClick={increaseCounter}>+1</button>
       </div>
